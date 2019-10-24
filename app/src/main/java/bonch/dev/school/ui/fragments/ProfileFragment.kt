@@ -27,16 +27,15 @@ class ProfileFragment: Fragment() {
         change_Password = view.findViewById(R.id.change_password_button)
         image_avatar = view.findViewById(R.id.avatar_image_view)
         image_avatar.setImageResource(R.drawable.avatar)
+        dialog = PasswordFragment()
         setListeners()
         return view
     }
 
     private fun setListeners(){
         change_Password.setOnClickListener( View.OnClickListener {
-            fragmentManager
-                .beginTransaction()
                  Log.d(TAG, "Opening Dialog")
-                dialog.show(fragmentManager, "PasswordFragment").commit()
+                dialog.show(fragmentManager!!, "PasswordFragment")
         })
     }
 

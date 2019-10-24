@@ -7,36 +7,35 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.constraintlayout.widget.Constraints.TAG
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import bonch.dev.school.R
 import kotlinx.android.synthetic.main.fragment_profile.*
 
-class PasswordFragment: Fragment() {
+class PasswordFragment: DialogFragment() {
 
     private lateinit var acceptButton : Button
-    private lateinit var dialog : PasswordFragment
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_password, container, false)
-        initialise()
+        val view = inflater.inflate(R.layout.fragment_dialog, container, false)
+        acceptButton = view!!.findViewById(R.id.change_password_button)
         setListener()
         return view
     }
 
-    private fun initialise(){
-        acceptButton = findViewById(R.id.change_password_button)
+    override fun onStart(){
+        super.onStart()
+            dialog!!.window!!.setLayout(800, 800)
     }
-
-
+    
     private fun setListener(){
         acceptButton.setOnClickListener(){
             Log.d(TAG, "closing dialog")
-            dialog.dismiss()
+            dialog!!.dismiss()
         }
     }
 
