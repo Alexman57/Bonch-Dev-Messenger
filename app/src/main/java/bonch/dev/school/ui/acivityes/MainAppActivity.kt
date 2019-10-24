@@ -1,7 +1,9 @@
 package bonch.dev.school.ui.acivityes
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import bonch.dev.school.R
 import bonch.dev.school.ui.fragments.ChatFragmenst
@@ -36,8 +38,8 @@ class MainAppActivity : AppCompatActivity() {
 
     fun replaceFragmentPassword(){
         fragmentManager
+
             .beginTransaction()
-            // was .replace
             .show(DialogFragment())
             .addToBackStack("second_fragment")
             .commit()

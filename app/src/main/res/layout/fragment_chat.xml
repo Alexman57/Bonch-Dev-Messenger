@@ -10,17 +10,14 @@
     <EditText
         android:id="@+id/message_et"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="70dp"
+        android:layout_height="53dp"
         android:hint="Message"
         android:inputType="textMultiLine"
-        android:lines="6"
+        android:maxLines="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/send"
@@ -31,13 +28,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/message_et"
         app:layout_constraintVertical_bias="1.0" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
