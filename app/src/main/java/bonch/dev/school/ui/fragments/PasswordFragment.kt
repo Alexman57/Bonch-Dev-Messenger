@@ -31,7 +31,7 @@ class PasswordFragment: DialogFragment() {
         super.onStart()
             dialog!!.window!!.setLayout(800, 800)
     }
-    
+
     private fun setListener(){
         acceptButton.setOnClickListener(){
             Log.d(TAG, "closing dialog")
