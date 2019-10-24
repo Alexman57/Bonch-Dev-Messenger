@@ -23,7 +23,8 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
              </activity>
-        <activity android:name=".ui.acivityes.SingUpActivity" />
+        <activity android:name=".ui.acivityes.SingUpActivity"
+                  android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity"></activity>
     </application>
 
